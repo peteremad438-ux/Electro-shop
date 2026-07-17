@@ -1,0 +1,373 @@
+/* ══════════════════════════════════════════
+   DASHBOARD — Full Responsive Fix
+   ══════════════════════════════════════════ */
+
+/* ─── Base dashboard layout ─── */
+.dashboard-section {
+  padding: 120px 0 80px;
+  min-height: 100vh;
+  animation: pageFadeUp 0.4s ease forwards;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  margin-top: 32px;
+  align-items: start;
+}
+
+/* ─── Sidebar nav ─── */
+.dashboard-sidebar-nav {
+  padding: 24px;
+  position: sticky;
+  top: 100px;
+}
+
+.profile-header-card {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: 20px;
+}
+
+.dashboard-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.db-menu-btn {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* ─── Main content ─── */
+.dashboard-main-content {
+  padding: 28px;
+  min-height: 400px;
+}
+
+.db-tab-content h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* ─── Stats overview ─── */
+.stats-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ─── Orders list ─── */
+.orders-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: border-color 0.2s;
+}
+
+.order-card:hover {
+  border-color: rgba(0, 242, 254, 0.2);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order-card-id {
+  color: var(--accent-cyan);
+  font-weight: 700;
+  font-size: 14px;
+  font-family: var(--font-display);
+}
+
+.order-card-date {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.order-card-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.order-item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 3px 0;
+}
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.order-status {
+  font-size: 12px;
+  font-weight: 600;
+  color: #06d6a0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.order-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #06d6a0;
+  box-shadow: 0 0 6px #06d6a0;
+}
+
+.order-total {
+  font-weight: 700;
+  font-size: 15px;
+  font-family: var(--font-display);
+}
+
+/* ─── Profile form ─── */
+#profile-edit-form .form-grid {
+  margin-bottom: 20px;
+}
+
+/* ─── Rank progress ─── */
+.level-progress-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  padding: 18px;
+  border-radius: var(--radius-md);
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════════ */
+
+/* ─── Tablet: 1024px ─── */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 240px 1fr;
+    gap: 24px;
+  }
+}
+
+/* ─── Small Tablet: 860px ─── */
+@media (max-width: 860px) {
+  .dashboard-section {
+    padding: 100px 0 60px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dashboard-sidebar-nav {
+    position: relative;
+    top: 0;
+    padding: 20px;
+  }
+
+  .profile-header-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+    padding-bottom: 16px;
+  }
+
+  .profile-avatar {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .profile-header-card h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+
+  .profile-header-card p {
+    font-size: 12px;
+  }
+
+  .dashboard-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .db-menu-btn {
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .db-menu-btn i {
+    width: 16px;
+    height: 16px;
+  }
+
+  .dashboard-main-content {
+    padding: 20px;
+  }
+
+  .stats-overview-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-value {
+    font-size: 22px;
+  }
+}
+
+/* ─── Mobile: 600px ─── */
+@media (max-width: 600px) {
+  .dashboard-section {
+    padding: 90px 0 48px;
+  }
+
+  .profile-header-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .profile-avatar {
+    margin: 0 auto;
+  }
+
+  .dashboard-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .db-menu-btn {
+    min-width: unset;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 8px;
+    font-size: 12px;
+    align-items: center;
+  }
+
+  .db-menu-btn i {
+    width: 18px;
+    height: 18px;
+  }
+
+  .stats-overview-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .stats-overview-grid .stat-card:last-child {
+    grid-column: span 2;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .dashboard-main-content {
+    padding: 16px;
+  }
+
+  .db-tab-content h3 {
+    font-size: 18px;
+  }
+
+  /* Profile form on mobile */
+  #profile-edit-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #profile-edit-form .col-span-2 {
+    grid-column: span 1;
+  }
+
+  #profile-edit-form button[type="submit"] {
+    width: 100%;
+  }
+
+  /* Section title */
+  .dashboard-section .section-title {
+    font-size: 26px;
+  }
+
+  .dashboard-section .section-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* ─── Mobile: 420px ─── */
+@media (max-width: 420px) {
+  .dashboard-menu {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .db-menu-btn {
+    font-size: 11px;
+    padding: 8px 6px;
+  }
+
+  .stats-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-overview-grid .stat-card:last-child {
+    grid-column: span 1;
+  }
+
+  .order-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .order-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

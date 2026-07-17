@@ -1,0 +1,382 @@
+/* ═══════════════════════════════════════════════
+   ADDITIONS — Performance, Responsive, New Features
+   يتحط في آخر main.css
+   ═══════════════════════════════════════════════ */
+
+/* ─── Quick Add Overlay on Product Cards ─── */
+.product-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.quick-add-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .25s ease;
+  backdrop-filter: blur(2px);
+}
+.product-img-wrapper:hover .quick-add-overlay {
+  opacity: 1;
+}
+.quick-add-inner {
+  transform: translateY(8px);
+  transition: transform .25s cubic-bezier(.16,1,.3,1);
+}
+.product-img-wrapper:hover .quick-add-inner {
+  transform: translateY(0);
+}
+
+/* ─── Card Hover Glow Pulse ─── */
+.product-card {
+  transition:
+    transform .3s cubic-bezier(.16,1,.3,1),
+    border-color .3s,
+    box-shadow .3s;
+}
+.product-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(0,242,254,.25);
+  box-shadow: 0 20px 60px rgba(0,242,254,.1), 0 4px 16px rgba(0,0,0,.5);
+}
+
+/* ─── Skeleton Loading (for images) ─── */
+.product-img-wrapper img {
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.product-img-wrapper img.loaded {
+  opacity: 1;
+}
+
+/* ─── Smooth page-section transitions ─── */
+#hero, #features, #shop, #dashboard, #whoweare,
+.stats-section, .testimonials-section,
+.marquee-section, .cta-banner-section {
+  transition: opacity .35s ease, transform .35s ease;
+}
+.section-exit {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+/* ─── RESPONSIVE: 768px — Tablet ─── */
+@media (max-width: 768px) {
+
+  /* Header */
+  .nav-links,
+  .search-bar-container {
+    display: none !important;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  .hero-content {
+    align-items: center;
+  }
+  .hero-title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .hero-actions-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .hero-actions-btns .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+  .hero-visual {
+    justify-content: center;
+  }
+  .hero-glass-card {
+    max-width: 100%;
+  }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .stat-item::after { display: none; }
+  .stat-number { font-size: 36px; }
+
+  /* Features */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-card { padding: 24px; }
+
+  /* Shop layout */
+  .shop-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .shop-sidebar {
+    position: relative;
+    top: 0;
+  }
+  .category-filters {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .category-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* CTA */
+  .cta-banner-content h2 { font-size: 32px; }
+  .cta-banner-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .cta-banner-actions .btn { width: 100%; max-width: 320px; justify-content: center; }
+
+  /* Cart & Wishlist sidebar */
+  .cart-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  /* Checkout modal */
+  .checkout-modal-content { padding: 20px 16px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .col-span-2 { grid-column: span 1; }
+  .card-visual-wrapper { height: 160px; }
+
+  /* Product detail modal */
+  .product-detail-modal { padding: 20px 16px; }
+  .modal-grid { grid-template-columns: 1fr; gap: 20px; }
+  .modal-product-img { height: 220px; }
+  .modal-reviews-section { grid-column: span 1; }
+
+  /* Dashboard */
+  .dashboard-grid { grid-template-columns: 1fr; gap: 20px; }
+  .dashboard-sidebar-nav { order: -1; }
+  .dashboard-menu { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .db-menu-btn { padding: 10px 14px; font-size: 13px; flex: 1; min-width: 120px; justify-content: center; }
+  .stats-overview-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Who We Are */
+  .whoweare-title { font-size: 40px; }
+  .whoweare-cards-grid { grid-template-columns: 1fr; gap: 20px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .whoweare-manifesto { padding: 32px 24px; }
+  blockquote { font-size: 18px; }
+
+  /* Compare modal */
+  .compare-modal-content { width: 95%; padding: 20px 16px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-bottom-container { flex-direction: column; align-items: center; gap: 8px; }
+}
+
+/* ─── RESPONSIVE: 480px — Mobile ─── */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+
+  .hero-title { font-size: 30px; }
+  .whoweare-title { font-size: 32px; }
+  .section-title { font-size: 28px; }
+  .cta-banner-content h2 { font-size: 26px; }
+
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .stat-number { font-size: 32px; }
+
+  .products-grid { grid-template-columns: 1fr; }
+
+  .team-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .team-card { padding: 20px 16px; }
+
+  .stats-overview-grid { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  .checkout-steps-indicator { gap: 0; }
+  .step-indicator { font-size: 11px; }
+  .step-line { margin: 0 6px; }
+
+  .success-modal-content { padding: 32px 20px; }
+
+  .comparison-bar-container { flex-direction: column; gap: 12px; align-items: flex-start; }
+
+  /* Spin wheel */
+  .wheel-outer-wrapper { width: 260px; height: 260px; }
+  .spin-modal-content { padding: 24px 16px; }
+
+  .hero-badge { font-size: 12px; padding: 5px 12px; }
+}
+
+/* ─── FEATURE: Smooth image lazy load fade-in ─── */
+@keyframes imgFadeIn {
+  from { opacity: 0; transform: scale(.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.product-img-wrapper img,
+.modal-product-img img,
+.cart-item-img img {
+  animation: imgFadeIn .4s ease forwards;
+}
+
+/* ─── FEATURE: Staggered card entrance ─── */
+.products-grid .product-card:nth-child(1)  { animation-delay: .04s; }
+.products-grid .product-card:nth-child(2)  { animation-delay: .08s; }
+.products-grid .product-card:nth-child(3)  { animation-delay: .12s; }
+.products-grid .product-card:nth-child(4)  { animation-delay: .16s; }
+.products-grid .product-card:nth-child(5)  { animation-delay: .20s; }
+.products-grid .product-card:nth-child(6)  { animation-delay: .24s; }
+.products-grid .product-card:nth-child(7)  { animation-delay: .28s; }
+.products-grid .product-card:nth-child(8)  { animation-delay: .32s; }
+.products-grid .product-card:nth-child(n+9){ animation-delay: .36s; }
+
+/* ─── FEATURE: Smooth modal open animation ─── */
+.modal-overlay.open .modal-content {
+  animation: modalPop .35s cubic-bezier(.16,1,.3,1) forwards;
+}
+@keyframes modalPop {
+  from { opacity:0; transform: translateY(24px) scale(.96); }
+  to   { opacity:1; transform: translateY(0) scale(1); }
+}
+
+/* ─── FEATURE: Cart sidebar slide + fade ─── */
+.cart-sidebar {
+  transition: right .35s cubic-bezier(.16,1,.3,1),
+              box-shadow .35s;
+}
+
+/* ─── FEATURE: Comparison bar slide-up spring ─── */
+.comparison-bar {
+  transition: bottom .45s cubic-bezier(.34,1.56,.64,1);
+}
+
+/* ─── FEATURE: Promo input shake on error ─── */
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%      { transform: translateX(-6px); }
+  40%      { transform: translateX(6px); }
+  60%      { transform: translateX(-4px); }
+  80%      { transform: translateX(4px); }
+}
+.promo-message.error ~ .promo-code-container input {
+  animation: shake .4s ease;
+  border-color: var(--accent-magenta) !important;
+}
+
+/* ─── FEATURE: Focus visible for keyboard nav ─── */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── FEATURE: Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ─── FIX: Cart sidebar full-width on very small screens ─── */
+@media (max-width: 420px) {
+  .cart-sidebar { width: 100%; right: -100%; }
+  .cart-sidebar.open { right: 0; }
+}
+
+/* ─── FIX: Section header padding on small screens ─── */
+@media (max-width: 768px) {
+  .shop-section  { padding: 48px 0; }
+  .features-section { padding: 48px 0; }
+  .testimonials-section { padding: 48px 0; }
+  .cta-banner-section { padding: 60px 0; }
+  .dashboard-section { padding: 100px 0 48px; }
+  .whoweare-section { padding: 100px 0 60px; }
+}
+
+/* ─── FIX: Hero glass card on mobile ─── */
+@media (max-width: 768px) {
+  .hero-glass-card {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .hero-card-img-placeholder {
+    height: 200px;
+  }
+}
+
+/* ─── ANIMATION: Wishlist heart bounce ─── */
+@keyframes heartBeat {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.35); }
+  60%  { transform: scale(.9); }
+  100% { transform: scale(1); }
+}
+.wishlist-card-btn.active i {
+  animation: heartBeat .4s cubic-bezier(.36,.07,.19,.97);
+}
+
+/* ─── ANIMATION: Add to cart button feedback ─── */
+.add-to-cart-btn:active,
+.quick-add-inner:active {
+  transform: scale(.93);
+}
+
+/* ─── ANIMATION: Page view transitions ─── */
+@keyframes pageFadeUp {
+  from { opacity:0; transform:translateY(16px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+#dashboard,
+#whoweare {
+  animation: pageFadeUp .4s ease forwards;
+}
+
+/* ─── FIX: Mobile drawer backdrop ─── */
+#mobile-drawer {
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+
+/* ─── FIX: Product card footer on very small screens ─── */
+@media (max-width: 360px) {
+  .product-card-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .product-card-footer .btn { width: 100%; justify-content: center; }
+}

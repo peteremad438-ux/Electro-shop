@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electro Shop | Next-Gen Premium Tech Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="additions.css" />
+    <link rel="stylesheet" href="dashboard-responsive.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo">
+          <span class="logo-accent"><i data-lucide="aperture"></i></span>
+          <span class="logo-text"
+            >Electro<span class="light-text">Shop</span></span
+          >
+        </div>
+        <nav class="nav-links">
+          <a href="#hero" class="nav-link active" id="nav-home-btn">Home</a>
+          <a href="#shop" class="nav-link" id="nav-shop-btn">Shop</a>
+          <a href="#dashboard" class="nav-link" id="nav-dashboard-btn"
+            >Dashboard</a
+          >
+          <a href="#" class="nav-link" id="nav-whoweare-btn">Who We Are</a>
+        </nav>
+        <div class="search-bar-container">
+          <i data-lucide="search" class="search-icon"></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search future tech..."
+          />
+        </div>
+        <div class="header-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon"></i>
+            <i data-lucide="moon" class="moon-icon"></i>
+          </button>
+          <button
+            id="wishlist-toggle"
+            class="btn-icon wishlist-btn"
+            aria-label="Open Wishlist"
+          >
+            <i data-lucide="heart"></i>
+            <span class="wishlist-badge" id="wishlist-count">0</span>
+          </button>
+          <button
+            id="cart-toggle"
+            class="btn-icon cart-btn"
+            aria-label="Open Cart"
+          >
+            <i data-lucide="shopping-bag"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="hero-particles" id="hero-particles"></div>
+      <div class="container hero-container">
+        <div class="hero-content" data-reveal>
+          <div class="hero-badge">
+            <i data-lucide="sparkles"></i> Future Tech Available Today
+          </div>
+          <h1 class="hero-title">
+            Upgrade to the <span class="gradient-text">Next Dimension</span> of
+            Technology
+          </h1>
+          <p class="hero-subtitle">
+            Experience cyberpunk aesthetics merged with premium engineering.
+            High-performance gadgets crafted for enthusiasts and visionaries.
+          </p>
+          <div class="hero-actions-btns">
+            <a href="#shop" class="btn btn-primary btn-glow"
+              >Explore Shop <i data-lucide="arrow-right"></i
+            ></a>
+            <button id="hero-spin-btn" class="btn btn-secondary">
+              <i data-lucide="sparkles"></i> Spin & Win Coupon
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual" data-reveal>
+          <div class="glass-card hero-glass-card">
+            <div class="card-glow"></div>
+            <div class="product-tag">FEATURED PRODUCT</div>
+            <div class="hero-card-img-placeholder">
+              <div class="hologram-effect"></div>
+              <img src="https://res.cloudinary.com/dbg6mw0g9/image/upload/v1782504532/card_uogfcd.jpg" alt="Aether Glass X" />
+            </div>
+            <div class="hero-card-details">
+              <h3>Aether Glass X</h3>
+              <p>Spatial computing augmented reality glasses.</p>
+              <div class="hero-card-footer">
+                <span class="price">$899.00</span>
+                <button
+                  class="btn btn-sm btn-primary add-to-cart-featured"
+                  data-id="2"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item" data-reveal>
+            <span class="stat-number" data-count="18">0</span>
+            <span class="stat-unit">+</span>
+            <span class="stat-desc">Premium Products</span>
+          </div>
+          <div class="stat-item" data-reveal>
+            <span class="stat-number" data-count="50">0</span>
+            <span class="stat-unit">K+</span>
+            <span class="stat-desc">Operatives Worldwide</span>
+          </div>
+          <div class="stat-item" data-reveal>
+            <span class="stat-number" data-count="4">0</span>
+            <span class="stat-unit">.9★</span>
+            <span class="stat-desc">Average Rating</span>
+          </div>
+          <div class="stat-item" data-reveal>
+            <span class="stat-number" data-count="24">0</span>
+            <span class="stat-unit">/7</span>
+            <span class="stat-desc">Support Active</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Designed for the Bold</h2>
+          <p class="section-subtitle">
+            We build electronics with zero compromise on speed, beauty, and
+            craftsmanship.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card glass-card" data-reveal>
+            <i data-lucide="shield-check" class="feature-icon"></i>
+            <h3>Secured Warranty</h3>
+            <p>
+              Every product includes a 2-year warranty covering all cosmic and
+              hardware errors.
+            </p>
+          </div>
+          <div class="feature-card glass-card" data-reveal>
+            <i data-lucide="zap" class="feature-icon text-glow-cyan"></i>
+            <h3>Hyper-Speed Delivery</h3>
+            <p>
+              Worldwide premium shipping. Packaged in static-shielded structural
+              carbon casing.
+            </p>
+          </div>
+          <div class="feature-card glass-card" data-reveal>
+            <i data-lucide="cpu" class="feature-icon text-glow-purple"></i>
+            <h3>AI-Enhanced Internals</h3>
+            <p>
+              Products integrated with localized neural processing units for
+              optimized performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">The Product Catalog</h2>
+          <p class="section-subtitle">
+            Filter through our high-performance line of computing and lifestyle
+            hardware.
+          </p>
+        </div>
+        <div class="shop-layout">
+          <aside class="shop-sidebar glass-card">
+            <h3>Filter Options</h3>
+            <div class="filter-group">
+              <label class="filter-label">Category</label>
+              <div class="category-filters">
+                <button class="category-btn active" data-category="all">
+                  All Products
+                </button>
+                <button class="category-btn" data-category="wearables">
+                  Wearables
+                </button>
+                <button class="category-btn" data-category="peripherals">
+                  Peripherals
+                </button>
+                <button class="category-btn" data-category="audio">
+                  Audio
+                </button>
+                <button class="category-btn" data-category="accessories">
+                  Accessories
+                </button>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="price-range"
+                >Max Price: <span id="price-value">$1200</span></label
+              >
+              <input
+                type="range"
+                id="price-range"
+                min="50"
+                max="1200"
+                step="10"
+                value="1200"
+              />
+              <div class="price-min-max">
+                <span>$50</span><span>$1200</span>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="sort-select">Sort By</label>
+              <select id="sort-select" class="form-select">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Rating</option>
+              </select>
+            </div>
+            <button id="reset-filters" class="btn btn-secondary btn-full">
+              Reset Filters
+            </button>
+          </aside>
+          <main class="products-container">
+            <div class="catalog-meta">
+              <span id="results-count">Showing all products</span>
+            </div>
+            <div class="products-grid" id="products-grid"></div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Operative Reviews</h2>
+          <p class="section-subtitle">
+            Words from the syndicate community across the globe.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card glass-card" data-reveal>
+            <div class="testimonial-stars">
+              <i data-lucide="star" class="rating-star"></i
+              ><i data-lucide="star" class="rating-star"></i>
+              <i data-lucide="star" class="rating-star"></i
+              ><i data-lucide="star" class="rating-star"></i>
+              <i data-lucide="star" class="rating-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The Quantum Chrono changed how I interact with reality. The
+              holographic UI is buttery smooth. Worth every credit."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">NK</div>
+              <div>
+                <span class="author-name">Nova Kim</span>
+                <span class="author-rank">Syndicate Captain</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass-card" data-reveal>
+            <div class="testimonial-stars">
+              <i data-lucide="star" class="rating-star"></i
+              ><i data-lucide="star" class="rating-star"></i>
+              <i data-lucide="star" class="rating-star"></i
+              ><i data-lucide="star" class="rating-star"></i>
+              <i data-lucide="star" class="rating-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Vortex Soundpods blocked out the entire Metro Grid. 48dB ANC is
+              no joke. Best audio gear I've ever equipped."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RX</div>
+              <div>
+                <span class="author-name">Rex Voltaire</span>
+                <span class="author-rank">Apex Visionary</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass-card" data-reveal>
+            <div class="testimonial-stars">
+              <i data-lucide="star" class="rating-star"></i
+              ><i data-lucide="star" class="rating-star"></i>
+              <i data-lucide="star" class="rating-star"></i
+              ><i data-lucide="star" class="rating-star"></i>
+              <i
+                data-lucide="star"
+                class="rating-star"
+                style="opacity: 0.3"
+              ></i>
+            </div>
+            <p class="testimonial-text">
+              "Nova Keyboard build quality is insane. The magnetic switches feel
+              unlike anything else on the market. Typing speed maxed."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">ZP</div>
+              <div>
+                <span class="author-name">Zara Pulse</span>
+                <span class="author-rank">Special Operative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Tech Strip -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <span>WEARABLE TECH</span><span class="marquee-dot">◆</span>
+        <span>NEURAL SYNC</span><span class="marquee-dot">◆</span>
+        <span>CYBERPUNK AUDIO</span><span class="marquee-dot">◆</span>
+        <span>HYPER PERIPHERALS</span><span class="marquee-dot">◆</span>
+        <span>AR VISION</span><span class="marquee-dot">◆</span>
+        <span>GAN CHARGING</span><span class="marquee-dot">◆</span>
+        <span>HOLO DISPLAY</span><span class="marquee-dot">◆</span>
+        <span>WEARABLE TECH</span><span class="marquee-dot">◆</span>
+        <span>NEURAL SYNC</span><span class="marquee-dot">◆</span>
+        <span>CYBERPUNK AUDIO</span><span class="marquee-dot">◆</span>
+        <span>HYPER PERIPHERALS</span><span class="marquee-dot">◆</span>
+        <span>AR VISION</span><span class="marquee-dot">◆</span>
+        <span>GAN CHARGING</span><span class="marquee-dot">◆</span>
+        <span>HOLO DISPLAY</span><span class="marquee-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- CTA Banner Section -->
+    <section class="cta-banner-section">
+      <div class="cta-banner-glow"></div>
+      <div class="container">
+        <div class="cta-banner-content" data-reveal>
+          <h2>Join the <span class="gradient-text">Apex Syndicate</span></h2>
+          <p>
+            Unlock early access, exclusive deals, and neural-tier upgrades when
+            you register today.
+          </p>
+          <div class="cta-banner-actions">
+            <a href="#shop" class="btn btn-primary btn-glow">Browse Catalog</a>
+            <button id="cta-spin-btn" class="btn btn-secondary">
+              <i data-lucide="gift"></i> Spin for Discount
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart (<span id="cart-header-count">0</span>)</h2>
+        <button class="btn-icon" id="cart-close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items-container"></div>
+      <div class="cart-footer">
+        <div class="promo-code-container">
+          <input
+            type="text"
+            id="promo-input"
+            placeholder="Promo code (e.g. APEX20)"
+          />
+          <button id="promo-apply" class="btn btn-secondary btn-sm">
+            Apply
+          </button>
+        </div>
+        <div id="promo-message" class="promo-message"></div>
+        <div class="cart-totals">
+          <div class="total-row">
+            <span>Subtotal</span><span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="total-row discount-row hidden" id="discount-row">
+            <span>Discount</span><span id="cart-discount">-$0.00</span>
+          </div>
+          <div class="total-row grand-total">
+            <span>Total</span><span id="cart-total">$0.00</span>
+          </div>
+        </div>
+        <button id="checkout-btn" class="btn btn-primary btn-full btn-glow">
+          Proceed to Checkout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Product Details Modal -->
+    <div class="modal-overlay" id="product-modal">
+      <div class="modal-content glass-card product-detail-modal">
+        <button class="modal-close btn-icon" id="close-product-modal">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="modal-grid" id="product-modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Multi-Step Checkout Modal -->
+    <div class="modal-overlay" id="checkout-modal">
+      <div class="modal-content glass-card checkout-modal-content">
+        <button class="modal-close btn-icon" id="close-checkout-modal">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="checkout-steps-indicator">
+          <div class="step-indicator active" data-step="1">1. Shipping</div>
+          <div class="step-line"></div>
+          <div class="step-indicator" data-step="2">2. Payment</div>
+          <div class="step-line"></div>
+          <div class="step-indicator" data-step="3">3. Review</div>
+        </div>
+        <form id="checkout-form" class="checkout-form-container">
+          <div class="checkout-step active" id="step-1-content">
+            <h3>Shipping Information</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="ship-name">Full Name</label
+                ><input
+                  type="text"
+                  id="ship-name"
+                  required
+                  placeholder="John Doe"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ship-email">Email Address</label
+                ><input
+                  type="email"
+                  id="ship-email"
+                  required
+                  placeholder="john@example.com"
+                />
+              </div>
+              <div class="form-group col-span-2">
+                <label for="ship-address">Street Address</label
+                ><input
+                  type="text"
+                  id="ship-address"
+                  required
+                  placeholder="123 Future Ave"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ship-city">City</label
+                ><input
+                  type="text"
+                  id="ship-city"
+                  required
+                  placeholder="Neo City"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ship-zip">Zip/Postal Code</label
+                ><input
+                  type="text"
+                  id="ship-zip"
+                  required
+                  placeholder="90210"
+                />
+              </div>
+            </div>
+            <div class="checkout-footer-buttons">
+              <span></span>
+              <button type="button" class="btn btn-primary" id="btn-to-step-2">
+                Continue to Payment <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="checkout-step" id="step-2-content">
+            <h3>Payment Details</h3>
+            <div class="card-visual-wrapper">
+              <div class="credit-card-glow-bg"></div>
+              <div class="credit-card-visual" id="credit-card-visual">
+                <div class="card-face card-front">
+                  <div class="card-chip"></div>
+                  <div class="card-logo">APEX PAY</div>
+                  <div class="card-number-display" id="cc-number-display">
+                    •••• •••• •••• ••••
+                  </div>
+                  <div class="card-footer-info">
+                    <div class="card-holder">
+                      <span class="card-lbl">CARDHOLDER</span
+                      ><span id="cc-name-display">YOUR NAME</span>
+                    </div>
+                    <div class="card-expires">
+                      <span class="card-lbl">EXPIRES</span
+                      ><span id="cc-exp-display">MM/YY</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-face card-back">
+                  <div class="card-magnetic-strip"></div>
+                  <div class="card-signature"></div>
+                  <div class="card-cvv-display" id="cc-cvv-display">•••</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group col-span-2">
+                <label for="card-number">Card Number</label
+                ><input
+                  type="text"
+                  id="card-number"
+                  maxlength="19"
+                  required
+                  placeholder="4000 1234 5678 9010"
+                />
+              </div>
+              <div class="form-group col-span-2">
+                <label for="card-name">Cardholder Name</label
+                ><input
+                  type="text"
+                  id="card-name"
+                  required
+                  placeholder="John Doe"
+                />
+              </div>
+              <div class="form-group">
+                <label for="card-expiry">Expiry Date</label
+                ><input
+                  type="text"
+                  id="card-expiry"
+                  maxlength="5"
+                  required
+                  placeholder="MM/YY"
+                />
+              </div>
+              <div class="form-group">
+                <label for="card-cvv">CVV</label
+                ><input
+                  type="password"
+                  id="card-cvv"
+                  maxlength="4"
+                  required
+                  placeholder="•••"
+                />
+              </div>
+            </div>
+            <div class="checkout-footer-buttons">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="btn-back-to-step-1"
+              >
+                <i data-lucide="arrow-left"></i> Back
+              </button>
+              <button type="button" class="btn btn-primary" id="btn-to-step-3">
+                Review Order <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="checkout-step" id="step-3-content">
+            <h3>Review Your Order</h3>
+            <div class="review-details-grid">
+              <div class="review-section">
+                <h4>Shipping To</h4>
+                <p id="review-shipping-name">John Doe</p>
+                <p id="review-shipping-address">123 Future Ave, Neo City</p>
+                <p id="review-shipping-email">john@example.com</p>
+              </div>
+              <div class="review-section">
+                <h4>Payment Method</h4>
+                <p>Card Ending in <span id="review-card-last4">9010</span></p>
+              </div>
+            </div>
+            <div class="review-summary-items">
+              <h4>Items Summary</h4>
+              <div class="review-items-list" id="review-items-list"></div>
+            </div>
+            <div class="review-total-box">
+              <div class="total-row font-sm">
+                <span>Subtotal</span><span id="review-subtotal">$0.00</span>
+              </div>
+              <div
+                class="total-row font-sm discount-row hidden"
+                id="review-discount-row"
+              >
+                <span>Discount</span><span id="review-discount">-$0.00</span>
+              </div>
+              <div class="total-row final-grand-total">
+                <span>Grand Total</span><span id="review-total">$0.00</span>
+              </div>
+            </div>
+            <div class="checkout-footer-buttons">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="btn-back-to-step-2"
+              >
+                <i data-lucide="arrow-left"></i> Back
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary btn-glow"
+                id="btn-submit-order"
+              >
+                Place Order $0.00
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Order Success Screen -->
+    <div class="modal-overlay" id="success-modal">
+      <div class="modal-content glass-card success-modal-content text-center">
+        <div class="success-icon-wrapper">
+          <i data-lucide="check-circle-2"></i>
+        </div>
+        <h2>Order Placed Successfully!</h2>
+        <p>
+          Thank you for shopping with Apex Gadgets. Your futuristic gear will be
+          shipped shortly.
+        </p>
+        <div class="order-id-box">
+          <span>ORDER ID: </span
+          ><span class="order-id" id="success-order-id">#APX-736291</span>
+        </div>
+        <button class="btn btn-primary" id="success-close-btn">
+          Return to Shop
+        </button>
+      </div>
+    </div>
+
+    <!-- User Dashboard Section -->
+    <section id="dashboard" class="dashboard-section hidden">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Syndicate Dashboard</h2>
+          <p class="section-subtitle">
+            Manage your profile, neural link details, and review transaction
+            logs.
+          </p>
+        </div>
+        <div class="dashboard-grid">
+          <aside class="dashboard-sidebar-nav glass-card">
+            <div class="profile-header-card">
+              <div class="profile-avatar">AP</div>
+              <h3 id="profile-display-name">Guest Operative</h3>
+              <p id="profile-display-rank">Initiate Member</p>
+            </div>
+            <div class="dashboard-menu">
+              <button class="db-menu-btn active" data-tab="db-profile">
+                <i data-lucide="user"></i> Profile Details
+              </button>
+              <button class="db-menu-btn" data-tab="db-orders">
+                <i data-lucide="history"></i> Order History
+              </button>
+              <button class="db-menu-btn" data-tab="db-stats">
+                <i data-lucide="bar-chart-3"></i> Spending Stats
+              </button>
+            </div>
+          </aside>
+          <main class="dashboard-main-content glass-card">
+            <div class="db-tab-content active" id="db-profile">
+              <h3>Profile Settings</h3>
+              <form id="profile-edit-form">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="prof-name">Username</label
+                    ><input
+                      type="text"
+                      id="prof-name"
+                      value="Guest Operative"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-rank">Neural Rank</label
+                    ><input
+                      type="text"
+                      id="prof-rank"
+                      value="Initiate Member"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group col-span-2">
+                    <label for="prof-address">Default Delivery Address</label
+                    ><input
+                      type="text"
+                      id="prof-address"
+                      placeholder="123 Future Ave, Sector 7"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-city">City</label
+                    ><input type="text" id="prof-city" placeholder="Neo City" />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-zip">Sector Code</label
+                    ><input type="text" id="prof-zip" placeholder="90210" />
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Save Changes
+                </button>
+              </form>
+            </div>
+            <div class="db-tab-content" id="db-orders">
+              <h3>Transaction Records</h3>
+              <div class="orders-list-container" id="db-orders-list">
+                <div class="no-orders">
+                  <i data-lucide="clipboard-list"></i>
+                  <p>No transactions registered under this neural sync.</p>
+                </div>
+              </div>
+            </div>
+            <div class="db-tab-content" id="db-stats">
+              <h3>Neural Metrics & Stats</h3>
+              <div class="stats-overview-grid">
+                <div class="stat-card glass-card">
+                  <span class="stat-label">Total Credits Spent</span
+                  ><span class="stat-value" id="stats-total-spent">$0.00</span>
+                </div>
+                <div class="stat-card glass-card">
+                  <span class="stat-label">Orders Logged</span
+                  ><span class="stat-value" id="stats-order-count">0</span>
+                </div>
+                <div class="stat-card glass-card">
+                  <span class="stat-label">Average Order Value</span
+                  ><span class="stat-value" id="stats-avg-spent">$0.00</span>
+                </div>
+              </div>
+              <div class="level-progress-container">
+                <div class="level-label">
+                  <span>Rank Progression</span
+                  ><span id="rank-progress-percent">0% to next tier</span>
+                </div>
+                <div class="level-progress-bar">
+                  <div
+                    class="level-progress-fill"
+                    id="rank-progress-fill"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Are Page -->
+    <section id="whoweare" class="whoweare-section hidden">
+      <div class="whoweare-bg-glow"></div>
+      <div class="whoweare-bg-glow2"></div>
+      <div class="container whoweare-container">
+        <div class="whoweare-header" data-reveal>
+          <div class="whoweare-badge">
+            <i data-lucide="aperture"></i> EST. 2020
+          </div>
+          <h1 class="whoweare-title">
+            We Are <span class="gradient-text">Apex Gadgets</span>
+          </h1>
+          <p class="whoweare-subtitle">
+            Born from the intersection of high-performance engineering and
+            cyberpunk vision — we build technology that belongs in the future,
+            available today.
+          </p>
+        </div>
+
+        <div class="whoweare-cards-grid">
+          <div class="whoweare-card glass-card" data-reveal>
+            <div class="whoweare-card-icon"><i data-lucide="target"></i></div>
+            <h3>Our Mission</h3>
+            <p>
+              To empower every operative with premium gear that bridges the gap
+              between human capability and machine precision. No compromise. No
+              shortcuts. Only the finest.
+            </p>
+          </div>
+          <div class="whoweare-card glass-card" data-reveal>
+            <div
+              class="whoweare-card-icon"
+              style="
+                background: rgba(157, 78, 221, 0.15);
+                color: var(--accent-purple);
+              "
+            >
+              <i data-lucide="eye"></i>
+            </div>
+            <h3>Our Vision</h3>
+            <p>
+              A world where every person is equipped with neural-tier technology
+              — where the boundary between thought and action dissolves
+              completely.
+            </p>
+          </div>
+          <div class="whoweare-card glass-card" data-reveal>
+            <div
+              class="whoweare-card-icon"
+              style="
+                background: rgba(255, 0, 127, 0.12);
+                color: var(--accent-magenta);
+              "
+            >
+              <i data-lucide="flame"></i>
+            </div>
+            <h3>Our Values</h3>
+            <p>
+              Precision. Transparency. Innovation. We hold every device to the
+              standard we would accept ourselves — tested in the field by the
+              syndicate, for the syndicate.
+            </p>
+          </div>
+        </div>
+
+        <div class="whoweare-team-section" data-reveal>
+          <h2 class="whoweare-section-title">The Core Syndicate</h2>
+          <div class="team-grid">
+            <div class="team-card glass-card">
+              <div
+                class="team-avatar"
+                style="background: linear-gradient(135deg, #00f2fe, #9d4edd)"
+              >
+                AX
+              </div>
+              <h4>Axon Vex</h4>
+              <span class="team-role">Founder & CEO</span>
+              <p>
+                Neural interface pioneer. 15 years engineering quantum hardware
+                for deep-space comm arrays.
+              </p>
+            </div>
+            <div class="team-card glass-card">
+              <div
+                class="team-avatar"
+                style="background: linear-gradient(135deg, #9d4edd, #ff007f)"
+              >
+                LN
+              </div>
+              <h4>Luna Nox</h4>
+              <span class="team-role">Chief Design Architect</span>
+              <p>
+                Cybernetic aesthetics visionary. Former holographic art director
+                at NeoCorp Labs.
+              </p>
+            </div>
+            <div class="team-card glass-card">
+              <div
+                class="team-avatar"
+                style="background: linear-gradient(135deg, #ff007f, #ffb703)"
+              >
+                KR
+              </div>
+              <h4>Kai Rho</h4>
+              <span class="team-role">Head of R&D</span>
+              <p>
+                GaN specialist and materials scientist. Holds 24 patents in
+                next-gen charging technology.
+              </p>
+            </div>
+            <div class="team-card glass-card">
+              <div
+                class="team-avatar"
+                style="background: linear-gradient(135deg, #00f2fe, #06d6a0)"
+              >
+                ZM
+              </div>
+              <h4>Zeta Mira</h4>
+              <span class="team-role">Operations Director</span>
+              <p>
+                Logistics and global supply chain expert. Keeps the syndicate
+                running across 40 sectors.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="whoweare-manifesto glass-card" data-reveal>
+          <div class="manifesto-glow"></div>
+          <i data-lucide="quote" class="manifesto-quote-icon"></i>
+          <blockquote>
+            "We don't build gadgets. We build the tools that operatives use to
+            exceed their own limits. Every circuit, every material, every
+            millisecond of response time is a statement: the future belongs to
+            those bold enough to reach for it."
+          </blockquote>
+          <cite>— Axon Vex, Founder</cite>
+        </div>
+
+        <div class="whoweare-back" data-reveal>
+          <button class="btn btn-primary btn-glow" id="back-from-whoweare">
+            <i data-lucide="arrow-left"></i> Back to Home
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wishlist Sidebar -->
+    <div class="cart-sidebar-overlay" id="wishlist-overlay"></div>
+    <aside class="cart-sidebar" id="wishlist-sidebar">
+      <div class="cart-header">
+        <h2>Your Wishlist (<span id="wishlist-header-count">0</span>)</h2>
+        <button class="btn-icon" id="wishlist-close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="wishlist-items-container"></div>
+      <div class="cart-footer">
+        <button
+          id="add-wishlist-to-cart-btn"
+          class="btn btn-primary btn-full btn-glow"
+        >
+          Add All to Cart
+        </button>
+      </div>
+    </aside>
+
+    <!-- Comparison Bar -->
+    <div class="comparison-bar" id="comparison-bar">
+      <div class="container comparison-bar-container">
+        <div class="comparison-bar-info">
+          <i data-lucide="columns-2"></i>
+          <span
+            >Compare Products: <strong id="compare-count">0</strong>/3
+            selected</span
+          >
+        </div>
+        <div class="comparison-bar-actions">
+          <button id="compare-clear-btn" class="btn btn-secondary btn-sm">
+            Clear
+          </button>
+          <button id="compare-open-btn" class="btn btn-primary btn-sm btn-glow">
+            Compare Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div class="modal-overlay" id="compare-modal">
+      <div class="modal-content glass-card compare-modal-content">
+        <button class="modal-close btn-icon" id="close-compare-modal">
+          <i data-lucide="x"></i>
+        </button>
+        <h2>Compare Products Specifications</h2>
+        <div class="compare-table-wrapper" id="compare-table-wrapper"></div>
+      </div>
+    </div>
+
+    <!-- Spin the Wheel Modal -->
+    <div class="modal-overlay" id="spin-modal">
+      <div class="modal-content glass-card spin-modal-content text-center">
+        <button class="modal-close btn-icon" id="close-spin-modal">
+          <i data-lucide="x"></i>
+        </button>
+        <h2>The Syndicate Wheel of Luck</h2>
+        <p>Spin the quantum wheel to decode exclusive discount codes!</p>
+        <div class="wheel-outer-wrapper">
+          <div class="wheel-pointer"></div>
+          <div class="wheel" id="wheel">
+            <div class="wheel-sector" style="--i: 0; --color: #ff007f">
+              <span>5% Off</span>
+            </div>
+            <div class="wheel-sector" style="--i: 1; --color: #9d4edd">
+              <span>TRY AGAIN</span>
+            </div>
+            <div class="wheel-sector" style="--i: 2; --color: #00f2fe">
+              <span>15% Off</span>
+            </div>
+            <div class="wheel-sector" style="--i: 3; --color: #ffb703">
+              <span>FREE SHIP</span>
+            </div>
+            <div class="wheel-sector" style="--i: 4; --color: #ff007f">
+              <span>10% Off</span>
+            </div>
+            <div class="wheel-sector" style="--i: 5; --color: #9d4edd">
+              <span>TRY AGAIN</span>
+            </div>
+            <div class="wheel-sector" style="--i: 6; --color: #00f2fe">
+              <span>25% Off</span>
+            </div>
+            <div class="wheel-sector" style="--i: 7; --color: #ffb703">
+              <span>APEX GIFT</span>
+            </div>
+          </div>
+          <button class="wheel-spin-btn" id="wheel-spin-btn">SPIN</button>
+        </div>
+        <div class="wheel-result-box hidden" id="wheel-result-box">
+          <h3 id="wheel-result-title">Calculating quantum results...</h3>
+          <p id="wheel-result-desc"></p>
+          <button class="btn btn-primary btn-sm" id="wheel-claim-btn">
+            Claim Coupon
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-accent"><i data-lucide="aperture"></i></span>
+            <span class="logo-text"
+              >APEX<span class="light-text">GADGETS</span></span
+            >
+          </div>
+          <p class="footer-desc">
+            Premium products designed for cybernetic speed, durability, and
+            beautiful minimalist style.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Github"><i data-lucide="github"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i data-lucide="instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Catalog</h4>
+          <ul>
+            <li>
+              <a href="#shop" class="cat-link" data-cat="wearables"
+                >Wearables</a
+              >
+            </li>
+            <li>
+              <a href="#shop" class="cat-link" data-cat="peripherals"
+                >Peripherals</a
+              >
+            </li>
+            <li>
+              <a href="#shop" class="cat-link" data-cat="audio"
+                >Audio Hardware</a
+              >
+            </li>
+            <li>
+              <a href="#shop" class="cat-link" data-cat="accessories"
+                >Accessories</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Warranty Info</a></li>
+            <li><a href="#">Shipping Details</a></li>
+            <li><a href="#">Security Protocols</a></li>
+            <li><a href="#" id="footer-whoweare-link">Who We Are</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Join the Syndicate</h4>
+          <p>
+            Get exclusive early access to product releases and firmware updates.
+          </p>
+          <form
+            class="newsletter-form"
+            onsubmit="
+              event.preventDefault();
+              alert('Subscribed to Syndicate updates!');
+              this.reset();
+            "
+          >
+            <input
+              type="email"
+              placeholder="Enter your neural link email..."
+              required
+            />
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-container">
+          <p>&copy; 2026 Apex Gadgets Syndicate. All rights reserved.</p>
+          <p>System Status: <span class="status-indicator">ONLINE</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
